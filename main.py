@@ -141,8 +141,6 @@ def build_dashboard(parent):
     make_label(tips, "Security essentials", 12, True, anchor="w").pack(fill="x", padx=20, pady=(16, 6))
     for tip in recommendations.GENERAL_TIPS:
         make_label(tips, f"✔  {tip}", 10, anchor="w", justify="left", wraplength=760).pack(fill="x", padx=20, pady=2)
-    make_label(tips, "🔒  SecurePass works fully offline. Passwords are kept in memory only and are wiped when you close the app.",
-               9, False, C["muted"], anchor="w", justify="left", wraplength=760).pack(fill="x", padx=20, pady=(10, 16))
     return p
 
 def build_generator(parent):
@@ -295,7 +293,6 @@ def build_header(parent):
     logo.create_oval(15, 12, 25, 22, fill="white", outline=""); logo.create_rectangle(18, 20, 22, 29, fill="white", outline="")
     make_label(h, "SecurePass", 18, True, "white", C["navy_dark"]).pack(side="left")
     make_label(h, "Password Generator & Strength Analyzer", 10, False, "#8E9AD0", C["navy_dark"]).pack(side="left", padx=14, pady=(6, 0))
-    make_label(h, "●  Offline · nothing is saved or sent", 9, True, "#4ADE80", C["navy_dark"]).pack(side="right", padx=22)
 
 def build_sidebar(parent):
     s = tk.Frame(parent, bg=C["navy"], width=225); s.pack(side="left", fill="y"); s.pack_propagate(False)
